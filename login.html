@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>سوبر خدمات الإنترنت</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="expires" content="-1" />
+      <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+      <meta http-equiv="pragma" content="no-cache" />
+      <meta http-equiv="expires" content="-1" />
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+      <link href="rtl.css" rel="stylesheet">
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="js/jquery-1.12.1.min.js"></script>
+      <script src="parallax.min.js" ></script>
+      <script src="js/bootstrap.min.js" ></script>
+      <style type="text/css">
+         body{
+         padding-top: 40px;
+         }
+      </style>
+   </head>
+   <body style="background: #DCDEDE url('images/bg.png') no-repeat;" data-spy="scroll" data-target="#my-navbar">
+      $(if chap-id)
+      <form name="sendin" action="$(link-login-only)" method="post">
+         <input type="hidden" name="username" />
+         <input type="hidden" name="password" />
+         <input type="hidden" name="dst" value="$(link-orig)" />
+         <input type="hidden" name="popup" value="true" />
+      </form>
+      <script type="text/javascript" src="/md5.js"></script>
+      <script type="text/javascript">
+         <!--
+            function doLogin() {
+            document.sendin.username.value = document.login.username.value;
+            document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+            document.sendin.submit();
+            return false;
+            }
+            //-->
+      </script>
+      <script type="text/javascript">
+         <!--
+            function doLogin2() {
+            document.sendin.username.value = document.login2.username.value;
+            document.sendin.password.value = hexMD5('$(chap-id)' + document.login2.password.value + '$(chap-challenge)');
+            document.sendin.submit();
+            return false;
+            }
+            //-->
+      </script>
+      $(endif)
+      <nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a href="/" class="navbar-brand">شبكة سوبر ويفي</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+               <ul class="nav navbar-nav">
+                  <li><a href="#services">خدماتنا</a>
+                  <li><a href="#contact">إتصل بنا</a>
+                  <li><a href="#feedback">Feedback</a> 
+               </ul>
+               <form class="navbar-form navbar-left" role="search" name="login" action="$(link-login-only)" method="post"
+               $(if chap-id) onSubmit="return doLogin()" $(endif)>
+               <input type="hidden" name="dst" value="$(link-orig)" />
+               <input type="hidden" name="popup" value="true" />
+               <div class="form-group">
+                  <input type="text" class="form-control" name="username" type="text" value="$(username)" placeholder="إسم المستخدم">
+               </div>
+               <div class="form-group">
+                  <input class="form-control" name="password" type="password" placeholder="كلمة المرور">
+               </div>
+               <button type="submit" class="btn btn-default">دخول</button>
+               </form>
+            </div>
+         </div>
+      </nav>
+      <div class="jumbotron" >
+         <div class="container text-center" >
+            <h1>مرحبا بكم في شبكة سوبرويفي</h1>
+            <p> خدمات الكمبيوتر و الإنترنت</p>
+            <a href="#contact" class="btn btn-lg btn-warning text-center">إشترك</a>
+         </div>
+      </div>
+      <!-- start trial section -->
+      <div class="container text-center" >$(if trial == 'yes')التجربة المجانية المتاحة، <a style="color: #FF8080"href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">اضغط هنا</a>.$(endif)</div>
+      <!-- end trial section -->
+      <!-- start login section -->
+      <section>
+         <div class="well">
+            <div class="container text-center">
+               <h3>سجل الدخول للإستفادة من خدمة إنترنت</h3>
+               <p>أدخل رمز الدخول، الـ14  حرف و رقم</p>
+               $(if error)
+               <div class="alert alert-danger">$(error)</div>
+               $(endif)
+               <form class="form-inline" role="search" name="login2" action="$(link-login-only)" method="post"
+               $(if chap-id) onSubmit="return doLogin2()" $(endif)>
+               <input type="hidden" name="dst" value="$(link-orig)" />
+               <input type="hidden" name="popup" value="true" />
+               <div class="form-group">
+                  <label for="subscription">رمز الدخول</label>
+                  <input id="username" type="text" class="form-control" name="username" type="text" value="$(username)" placeholder="wnxk42i3vj9hit">
+               </div>
+               <div class="form-group">
+                  <input id="password" class="form-control" name="password" type="hidden">
+               </div>
+               <button type="submit" class="btn btn-default">دخول</button>
+               </form>
+               <h3><a href="#contact">ليس لدي رمز دخول!!</a> </h3>
+            </div>
+            <!-- end Container-->
+         </div>
+         <!-- end well-->
+      </section>
+      <!-- end login section -->
+      <!-- Gallery -->
+      <div class="container">
+         <section >
+            <div class="page-header" id="services">
+            </div>
+            <div class="carousel slide" id="screenshot-carousel" data-ride="carousel">
+               <ol class="carousel-indicators">
+                  <li data-target="#screenshot-carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#screenshot-carousel" data-slide-to="1"></li>
+                  <li data-target="#screenshot-carousel" data-slide-to="2"></li>
+                  <li data-target="#screenshot-carousel" data-slide-to="3"></li>
+               </ol>
+               <div class="carousel-inner">
+                  <div class="item active">
+                     <a href="#internet">
+                        <img src="slider-imgs/002.jpg" alt="Text of the image">
+                        <div class="carousel-caption">
+                           <h3>إنترنت</h3>
+                           <p>إستفد من إنترنت سريع جدا</p>
+                     </a>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <img src="slider-imgs/003.png" alt="Text of the image">
+                     <div class="carousel-caption">
+                        <h3>اتصلات مجانية</h3>
+                        <p><a href="http://10.10.1.90/?p=3117" target="_blank" style="text-decoration: none;">استفد من مكالمات مجنية صوت و صورة</a></p>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <img src="slider-imgs/wifi-blog-header1.png" alt="Text of the image">
+                     <div class="carousel-caption">
+                        <h3>متصل دوما</h3>
+                        <p>حساب واحد لكل الخدمات ، من أي جهاز و في كل الشبكة</p>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <img src="slider-imgs/004.JPG" alt="Text of the image">
+                     <div class="carousel-caption">
+                        <h3>المساعدة الفورية</h3>
+                        <p>مساعدة فريق العمل متاحة 24/24 7/7</p>
+                     </div>
+                  </div>
+               </div>
+               <!-- End Carousel inner -->
+               <a href="#screenshot-carousel" class="left carousel-control" data-slide="prev">
+               <span class="glyphicon glyphicon-chevron-left"></span>
+               </a>
+               <a href="#screenshot-carousel" class="right carousel-control" data-slide="next">
+               <span class="glyphicon glyphicon-chevron-right"></span>
+               </a>
+            </div>
+            <!-- End Carousel -->
+         </section>
+      </div>
+      <!-- Feedback-->
+      <div class="container" >
+         <section>
+            <div class="page-header" id="internet">
+               <h2>الإنترنت.<small>  إطلع على اقتراحات الإنترنت المميزة.</small></h2>
+            </div>
+            <div class="row">
+               <div class="col-md-4 text-center">
+                  <blockquote>
+                     <strong>100 دج</strong>
+                     <p>غير محدودة بسرعة عالية 100دج يومي</p>
+                     <a href="#contact" class="btn btn-lg btn-warning text-center" style="margin: 1px 1px 7px 1px">إشترك</a>
+                     <img src="images/receipt1.png" alt="100DA" class="img-responsive center-block" />
+                  </blockquote>
+               </div>
+               <div class="col-md-4 text-center">
+                  <blockquote>
+                     <strong>500 دج</strong>
+                     <p>غير محدودة بسرعة عالية 500 دج اسبوعي</p>
+                     <a href="#contact" class="btn btn-lg btn-warning text-center" style="margin: 1px 1px 7px 1px">إشترك</a>
+                     <img src="images/receipt2.png" alt="500DA" class="img-responsive center-block" />
+                  </blockquote>
+               </div>
+               <div class="col-md-4 text-center">
+                  <blockquote>
+                     <strong>1200 دج</strong>
+                     <p>غير محدودة بسرعة عالية 1200 دج شهري</p>
+                     <a href="#contact" class="btn btn-lg btn-warning text-center" style="margin: 1px 1px 7px 1px">إشترك</a>
+                     <img src="images/receipt3.png" alt="1200DA" class="img-responsive center-block" />
+                  </blockquote>
+               </div>
+            </div>
+            <!-- End row -->
+         </section>
+      </div>
+      <!--End Container-->
+      <hr>
+      <div class="container text-centerpage-header text-center" id="contact">
+         <h1>كيف احصل على الرمز؟</h1>
+         <h3>يمكنكم شراء بطاقات التعبئة من موزعي بطاقات الهاتف النقال Taxiphones</h3>
+      </div>
+      <!-- authorised dealers section -->
+      <div class="container text-centerpage-header text-center">
+         <div class="panel panel-success">
+            <div class="panel-heading">
+               <h1 class="panel-title" style="font-size: 36px;">المحلات المعتمدين لبيع البطاقات</h1>
+            </div>
+            <div class="panel-group" id="accordion">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h2 class="panel-title" style="font-size: 30px;">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                        الزياينة</a>
+                     </h2>
+                  </div>
+                  <div id="collapse1" class="panel-collapse collapse in">
+                     <div class="panel-body">كشك الخدمات الهاتفية ، المحطة النهائية (le terminus)
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title" style="font-size: 30px;">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                        سوق الرحمة</a>
+                     </h4>
+                  </div>
+                  <div id="collapse2" class="panel-collapse collapse">
+                     <div class="panel-body">كشك الخدمات الهاتفية بن عطاء الله
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title" style="font-size: 30px;">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                        سكرة</a>
+                     </h4>
+                  </div>
+                  <div id="collapse3" class="panel-collapse collapse">
+                     <div class="panel-body">كشك الخدمات و الادوات المكتبية مقابل الفرع البلدي سكرة
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container text-centerpage-header text-center" id="feedback">
+         <h1>للإستفسار اتصل على الأرقام التالية</h1>
+      </div>
+      <div class="row row-centered">
+         <div class="col-xs-6 col-centered">
+            <div class="panel panel-default text-center">
+               <div class="panel-body">
+                  <span class="glyphicon glyphicon-earphone"></span>
+                  <h4><a href="tel:0663974296">0663974296</a></h4>
+                  <p>رجاءا الإتصال في الأوقات المناسبة فقط</p>
+               </div>
+            </div>
+         </div>
+         <div class="col-xs-6 col-centered">
+            <div class="panel panel-default text-center">
+               <div class="panel-body">
+                  <span class="glyphicon glyphicon-phone-alt"></span>
+                  <h4><a href="tel:0697371315">0697371315</a></h4>
+                  <p>رجاءا الإتصال في الأوقات المناسبة فقط</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end row -->
+      <script type="text/javascript">
+         <!--
+            document.login.username.focus();
+            //-->
+      </script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+         $("#password").val($("#username").val());
+         $("#username").keyup(function() {
+         $("#password").val($("#username").val());
+         })
+         $('a[href^="#"]').on('click',function (e) {
+             e.preventDefault();
+         
+             var target = this.hash;
+             var $target = $(target);
+         
+             $('html, body').stop().animate({
+                 'scrollTop': $target.offset().top
+             }, 900, 'swing', function () {
+                 window.location.hash = target;
+             });
+         });
+         });	
+      </script>
+   </body>
+</html>
